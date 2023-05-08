@@ -1,5 +1,6 @@
 import React from "react";
 import { notion } from "../api/notion";
+import Image from "next/image";
 
 export default function Stories({ stories }: any) {
   return (
@@ -18,6 +19,12 @@ export default function Stories({ stories }: any) {
                   <span key={item}>{item.plain_text}</span>
                 ))}
               </p>
+              <Image
+                src={story.properties.Image.url}
+                alt={""}
+                width={400}
+                height={400}
+              />
             </div>
           ))}
         </div>
