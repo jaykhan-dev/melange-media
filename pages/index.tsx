@@ -18,10 +18,10 @@ export default function Home({ stories }: any) {
       </Head>
       <main id={styles.homeBg} className="">
         <div className="grid place-items-center h-screen bg-black/0">
-          <div>
+          {/* <div>
             <h1 className="lg:text-4xl font-bold">Melange Media</h1>
             <p>Storytelling galore</p>
-          </div>
+          </div> */}
         </div>
       </main>
     </>
