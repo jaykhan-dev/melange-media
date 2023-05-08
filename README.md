@@ -1,3 +1,9 @@
+# Melange Media
+
+E-commerce for those who love stories of all kinds.
+
+Built with Next JS and Notion as a CMS.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
