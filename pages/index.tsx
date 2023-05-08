@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Head from "next/head";
 import { Inter } from "next/font/google";
-import { Client } from "@notionhq/client";
+import styles from "/styles/backgrounds.module.css";
 import { notion } from "./api/notion";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -9,27 +10,21 @@ export default function Home({ stories }: any) {
   if (!stories) return <div>no stories</div>;
   //console.log(stories);
   return (
-    <main className="grid place-items-center h-screen">
-      <div>
-        <h1>NOTION API + NEXT</h1>
-        <div>
-          {stories.map((story: any) => (
-            <div key={story.id}>
-              <h2 className="text-2xl text-green-500">
-                {story.properties.Title.title.map((item: any) => (
-                  <span key={item}>{item.plain_text}</span>
-                ))}
-              </h2>
-              <p>
-                {story.properties.Author.rich_text.map((item: any) => (
-                  <span key={item}>{item.plain_text}</span>
-                ))}
-              </p>
-            </div>
-          ))}
+    <>
+      <Head>
+        <title>Melange Media</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="E-commerce" />
+      </Head>
+      <main id={styles.homeBg} className="">
+        <div className="grid place-items-center h-screen bg-black/0">
+          <div>
+            <h1 className="lg:text-4xl font-bold">Melange Media</h1>
+            <p>Storytelling galore</p>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 
